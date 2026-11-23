@@ -1,7 +1,7 @@
 """Konstanten für Abos & Verträge."""
 
 DOMAIN = "abo_vertraege"
-VERSION = "1.0.6"
+VERSION = "1.0.7"
 
 CONF_NAME = "name"
 CONF_PERSONEN = "personen"  # zusätzliche Personen (Liste)
