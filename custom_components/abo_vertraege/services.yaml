@@ -1,0 +1,19 @@
+importieren:
+  fields:
+    quelle:
+      required: true
+      selector:
+        entity:
+          domain: todo
+    ziel:
+      required: true
+      selector:
+        entity:
+          integration: abo_vertraege
+          domain: todo
+    erledigte:
+      default: true
+      selector:
+        boolean:
+
+jetzt_pruefen:

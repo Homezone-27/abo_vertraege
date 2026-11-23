@@ -1,0 +1,98 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Subscriptions & contracts",
+        "description": "Creates a list for subscriptions, contracts and fees. The card “Abos & Verträge” is then available in dashboards.",
+        "data": {
+          "name": "List name",
+          "ha_personen": "Use people from Home Assistant",
+          "personen": "Additional people",
+          "filterzeilen": "Filter rows in the card",
+          "benachrichtigen": "Notify",
+          "erinnerung_zeit": "Reminder time",
+          "erinnerung_tage": "Remind … days before the last cancellation day",
+          "erinnerung_monatlich": "Remind for monthly renewals",
+          "erinnerung_tage_monatlich": "For monthly renewals remind … days before"
+        },
+        "data_description": {
+          "personen": "Extra names for the card, e.g. Shared. Type and press Enter.",
+          "benachrichtigen": "Phone app, Pushover etc. Leave empty to get a Home Assistant notification.",
+          "erinnerung_tage": "e.g. 60, 30, 14, 7, 1, 0 (0 = on the last day). Not used for monthly renewing subscriptions.",
+          "ha_personen": "Currently: {ha_personen}. Only first names are used; new people are added automatically.",
+          "erinnerung_monatlich": "For subscriptions that renew every month. Off = no reminders for them.",
+          "erinnerung_tage_monatlich": "e.g. 7",
+          "filterzeilen": "Which rows are shown above the list."
+        }
+      }
+    },
+    "error": {
+      "keine_personen": "Use people from Home Assistant or enter at least one additional person.",
+      "tage_ungueltig": "Use numbers 0–365, comma separated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Settings",
+        "data": {
+          "ha_personen": "Use people from Home Assistant",
+          "personen": "Additional people",
+          "filterzeilen": "Filter rows in the card",
+          "benachrichtigen": "Notify",
+          "erinnerung_zeit": "Reminder time",
+          "erinnerung_tage": "Remind … days before the last cancellation day",
+          "erinnerung_monatlich": "Remind for monthly renewals",
+          "erinnerung_tage_monatlich": "For monthly renewals remind … days before"
+        },
+        "data_description": {
+          "personen": "Extra names for the card, e.g. Shared. Type and press Enter.",
+          "benachrichtigen": "Phone app, Pushover etc. Leave empty to get a Home Assistant notification.",
+          "erinnerung_tage": "e.g. 60, 30, 14, 7, 1, 0 (0 = on the last day). Not used for monthly renewing subscriptions.",
+          "ha_personen": "Currently: {ha_personen}. Only first names are used; new people are added automatically.",
+          "erinnerung_monatlich": "For subscriptions that renew every month. Off = no reminders for them.",
+          "erinnerung_tage_monatlich": "e.g. 7",
+          "filterzeilen": "Which rows are shown above the list."
+        },
+        "description": "People in Home Assistant: {ha_personen}"
+      }
+    },
+    "error": {
+      "keine_personen": "Use people from Home Assistant or enter at least one additional person.",
+      "tage_ungueltig": "Use numbers 0–365, comma separated."
+    }
+  },
+  "services": {
+    "importieren": {
+      "name": "Import from another list",
+      "description": "Copies items from another to-do list. Duplicates are skipped.",
+      "fields": {
+        "quelle": {
+          "name": "From list",
+          "description": "To-do list to copy from."
+        },
+        "ziel": {
+          "name": "Into list",
+          "description": "Abos & Verträge list."
+        },
+        "erledigte": {
+          "name": "Include cancelled",
+          "description": "Also copy checked (cancelled) items."
+        }
+      }
+    },
+    "jetzt_pruefen": {
+      "name": "Check now",
+      "description": "Renews due items and sends today's reminders right away."
+    }
+  },
+  "selector": {
+    "filterzeilen": {
+      "options": {
+        "person": "Person",
+        "art": "Type",
+        "sortierung": "Sort order"
+      }
+    }
+  }
+}

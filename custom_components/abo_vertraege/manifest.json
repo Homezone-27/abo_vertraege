@@ -1,0 +1,13 @@
+{
+  "domain": "abo_vertraege",
+  "name": "Abos & Verträge",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["frontend", "http", "todo"],
+  "documentation": "https://github.com/Homezone-27/abo_vertraege",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/Homezone-27/abo_vertraege/issues",
+  "requirements": [],
+  "version": "1.0.6"
+}

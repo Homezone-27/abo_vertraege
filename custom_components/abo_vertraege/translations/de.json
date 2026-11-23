@@ -1,0 +1,98 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Abos & Verträge",
+        "description": "Legt eine Liste für Abos, Verträge und Beiträge an. Die Karte „Abos & Verträge“ steht danach im Dashboard zur Auswahl.",
+        "data": {
+          "name": "Name der Liste",
+          "ha_personen": "Personen aus Home Assistant übernehmen",
+          "personen": "Weitere Personen",
+          "filterzeilen": "Filterzeilen in der Karte",
+          "benachrichtigen": "Benachrichtigen an",
+          "erinnerung_zeit": "Uhrzeit der Erinnerung",
+          "erinnerung_tage": "Erinnern … Tage vor dem letzten Kündigungstag",
+          "erinnerung_monatlich": "Erinnerung bei monatlicher Verlängerung",
+          "erinnerung_tage_monatlich": "Bei monatlicher Verlängerung … Tage vorher erinnern"
+        },
+        "data_description": {
+          "personen": "Zusätzliche Namen für die Auswahl in der Karte, z. B. Gemeinsam oder Kinder ohne eigene Person in Home Assistant. Eintippen und Enter drücken.",
+          "benachrichtigen": "Handy-App, Pushover usw. Leer lassen: Meldung erscheint unter Benachrichtigungen in Home Assistant.",
+          "erinnerung_tage": "z. B. 60, 30, 14, 7, 1, 0 (0 = am letzten Tag). Gilt nicht für Abos, die sich jeden Monat verlängern.",
+          "ha_personen": "Zurzeit: {ha_personen}. Übernommen werden nur die Vornamen; neu angelegte Personen kommen automatisch dazu.",
+          "erinnerung_monatlich": "Für Abos wie Disney+ oder Netflix, die sich jeden Monat verlängern. Ausschalten = für diese Abos keine Erinnerung.",
+          "erinnerung_tage_monatlich": "z. B. 7",
+          "filterzeilen": "Welche Zeilen über der Liste angezeigt werden."
+        }
+      }
+    },
+    "error": {
+      "keine_personen": "Bitte Personen aus Home Assistant übernehmen oder mindestens eine weitere Person eintragen.",
+      "tage_ungueltig": "Bitte Zahlen von 0 bis 365, durch Komma getrennt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Einstellungen",
+        "data": {
+          "ha_personen": "Personen aus Home Assistant übernehmen",
+          "personen": "Weitere Personen",
+          "filterzeilen": "Filterzeilen in der Karte",
+          "benachrichtigen": "Benachrichtigen an",
+          "erinnerung_zeit": "Uhrzeit der Erinnerung",
+          "erinnerung_tage": "Erinnern … Tage vor dem letzten Kündigungstag",
+          "erinnerung_monatlich": "Erinnerung bei monatlicher Verlängerung",
+          "erinnerung_tage_monatlich": "Bei monatlicher Verlängerung … Tage vorher erinnern"
+        },
+        "data_description": {
+          "personen": "Zusätzliche Namen für die Auswahl in der Karte, z. B. Gemeinsam oder Kinder ohne eigene Person in Home Assistant. Eintippen und Enter drücken.",
+          "benachrichtigen": "Handy-App, Pushover usw. Leer lassen: Meldung erscheint unter Benachrichtigungen in Home Assistant.",
+          "erinnerung_tage": "z. B. 60, 30, 14, 7, 1, 0 (0 = am letzten Tag). Gilt nicht für Abos, die sich jeden Monat verlängern.",
+          "ha_personen": "Zurzeit: {ha_personen}. Übernommen werden nur die Vornamen; neu angelegte Personen kommen automatisch dazu.",
+          "erinnerung_monatlich": "Für Abos wie Disney+ oder Netflix, die sich jeden Monat verlängern. Ausschalten = für diese Abos keine Erinnerung.",
+          "erinnerung_tage_monatlich": "z. B. 7",
+          "filterzeilen": "Welche Zeilen über der Liste angezeigt werden."
+        },
+        "description": "Personen in Home Assistant: {ha_personen}"
+      }
+    },
+    "error": {
+      "keine_personen": "Bitte Personen aus Home Assistant übernehmen oder mindestens eine weitere Person eintragen.",
+      "tage_ungueltig": "Bitte Zahlen von 0 bis 365, durch Komma getrennt."
+    }
+  },
+  "services": {
+    "importieren": {
+      "name": "Aus anderer Liste übernehmen",
+      "description": "Übernimmt Einträge aus einer anderen To-do-Liste (z. B. der bisherigen Liste „Abos & Verträge“). Doppelte Einträge werden übersprungen.",
+      "fields": {
+        "quelle": {
+          "name": "Von Liste",
+          "description": "To-do-Liste, aus der übernommen wird."
+        },
+        "ziel": {
+          "name": "In Liste",
+          "description": "Liste von Abos & Verträge."
+        },
+        "erledigte": {
+          "name": "Gekündigte mit übernehmen",
+          "description": "Auch abgehakte (gekündigte) Einträge übernehmen."
+        }
+      }
+    },
+    "jetzt_pruefen": {
+      "name": "Jetzt prüfen",
+      "description": "Verlängert fällige Einträge und schickt die heute fälligen Erinnerungen sofort."
+    }
+  },
+  "selector": {
+    "filterzeilen": {
+      "options": {
+        "person": "Person",
+        "art": "Art",
+        "sortierung": "Sortiert"
+      }
+    }
+  }
+}
