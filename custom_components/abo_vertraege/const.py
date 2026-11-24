@@ -1,7 +1,13 @@
 """Konstanten für Abos & Verträge."""
 
+import json
+from pathlib import Path
+
 DOMAIN = "abo_vertraege"
-VERSION = "1.0.7"
+
+VERSION: str = json.loads(
+    (Path(__file__).parent / "manifest.json").read_text(encoding="utf-8")
+)["version"]
 
 CONF_NAME = "name"
 CONF_PERSONEN = "personen"  # zusätzliche Personen (Liste)
